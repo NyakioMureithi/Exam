@@ -15,13 +15,13 @@ stage('Build docker image'){
 sh "docker build -t maureen:latest ."
 }
 
-stage('Docker login to hub and push the image'){
+stage('Docker login to Docker hub'){
 sh "docker login -u 'mmureithi' -p 'Mureithi5' "
 }
-stage('1'){
+stage('Tag image'){
 sh "docker tag maureen:latest mmureithi/maureenexam:latest"
 }
-stage('2'){
+stage('Push image'){
 sh "docker push mmureithi/test:latest"
 }
 
