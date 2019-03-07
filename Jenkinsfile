@@ -26,7 +26,7 @@ sh "docker push mmureithi/maureenexam:latest"
 }
 stage('Deploy the image')
   {
- sh('docker run -d -p 6783 maureen:latest')
+ sh('docker run -d -p 6783:80/tcp maureen:latest')
   }
   
 stage('Apply changes to the environment') {
