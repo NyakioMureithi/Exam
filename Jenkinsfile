@@ -24,14 +24,15 @@ sh "docker tag maureen:latest mmureithi/maureenexam:latest"
 stage('Push image'){
 sh "docker push mmureithi/maureenexam:latest"
 }
-
-stage('Apply changes to the environment') {
-sh "ls -l"
-}
 stage('Deploy the image')
   {
  sh('docker run -d -p 6783 maureen:latest')
   }
+  
+stage('Apply changes to the environment') {
+sh "ls -l"
+}
+
 
 }
 
