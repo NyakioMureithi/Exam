@@ -1,13 +1,4 @@
-node {
 
-stage('Clone Repository')
-{
-checkout scm
-}
-
-stage('Show me the files'){
-sh "ls -l"
-}
 node {
 
 stage('Clone Repository')
