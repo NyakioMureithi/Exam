@@ -22,7 +22,7 @@ stage('Tag image'){
 sh "docker tag maureen:latest mmureithi/maureenexam:latest"
 }
 stage('Push image'){
-sh "docker push mmureithi/test:latest"
+sh "docker push mmureithi/maureenexam:latest"
 }
 
 stage('Apply changes to the environment') {
